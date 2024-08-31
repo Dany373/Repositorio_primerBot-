@@ -9,6 +9,15 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+
+
         <dependency>
             <groupId>org.telegram</groupId>
             <artifactId>telegrambots</artifactId>
@@ -25,6 +34,9 @@
             <artifactId>slf4j-api</artifactId>
             <version>1.7.36</version> <!-- O la última versión disponible -->
         </dependency>
+
+
+
         <dependency>
             <groupId>umg.demostracion</groupId>
             <artifactId>primerBot</artifactId>
