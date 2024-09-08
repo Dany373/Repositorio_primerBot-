@@ -1,13 +1,13 @@
 package model;
 
-public class Respuesta {
+public class Respuesta2 {
     private int id;
     private String seccion;
     private long telegramId;
     private int preguntaId;
     private String respuestaTexto;
 
-    public Respuesta() {
+    public Respuesta2() {
 
     }
 
@@ -53,7 +53,7 @@ public class Respuesta {
 
 
 
-    public Respuesta(String seccion, long telegramId, int preguntaId, String respuestaTexto) {
+    public Respuesta2(String seccion, long telegramId, int preguntaId, String respuestaTexto) {
         this.seccion = seccion;
         this.telegramId = telegramId;
         this.preguntaId = preguntaId;

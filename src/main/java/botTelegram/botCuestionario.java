@@ -1,6 +1,6 @@
 package botTelegram;
 
-import model.Respuesta;
+import model.Respuesta2;
 import model.User;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import service.RespuestaService;
+import service.RespuestaService2;
 import service.UserService;
 
 import java.sql.SQLException;
@@ -26,11 +26,11 @@ public class botCuestionario extends TelegramLongPollingBot {
     private final Map<Long, String> seccionActiva = new HashMap<>();
     private final Map<String, String[]> preguntas = new HashMap<>();
     private final UserService userService;
-    private final RespuestaService respuestaService;
+    private final RespuestaService2 respuestaService;
 
     public botCuestionario() {
         this.userService = new UserService();
-        this.respuestaService = new RespuestaService();
+        this.respuestaService = new RespuestaService2();
         preguntas.put("SECTION_1", new String[]{"🤦‍♂️1.1- Estas aburrido?", "😂😂 1.2- Te bañaste hoy?", "🤡🤡 Pregunta 1.3"});
         preguntas.put("SECTION_2", new String[]{"Pregunta 2.1- ¿Que edad tienes?👴👦", "Pregunta 2.2- ¿Como estas? 👍👎", "Pregunta 2.3- ¿que te gusta hacer? 👁️👁️", "Pregunta 2.4- ¿Tu sabor de helado favorito? 🍦", "Pregunta 2.5- ¿De que pais eres? 🌎", "Pregunta 2.6- ¿Te gustaron las Preguntas? 🙂"});
         preguntas.put("SECTION_3", new String[]{"Pregunta 3.1", "Pregunta 3.2", "Pregunta 3.3"});
@@ -178,7 +178,7 @@ public class botCuestionario extends TelegramLongPollingBot {
             }
         }
         // OBJETO RESPUESTA
-        Respuesta respuesta = new Respuesta();
+        Respuesta2 respuesta = new Respuesta2();
         respuesta.setSeccion(seccion);
         respuesta.setTelegramId(chatId);
         respuesta.setPreguntaId(index + 1); // Ajustar si el ID de la pregunta comienza en 1

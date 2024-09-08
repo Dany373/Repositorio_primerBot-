@@ -1,9 +1,6 @@
 package umg.demostracion;
 
-import botTelegram.Bot;
-import botTelegram.BotRegistra;
-import botTelegram.botCuestionario;
-import botTelegram.botPregunton;
+import botTelegram.*;
 import db.DatabaseConnection;
 import model.User;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
@@ -170,9 +167,9 @@ public class Main {
         }
     }
 public static void main(String[] args) {
-            try {
+  try {
 // Inicializa la API de Telegram
-        TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
+TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
 
 // Registra ambos bots
         botsApi.registerBot(new botCuestionario());
@@ -185,3 +182,16 @@ public static void main(String[] args) {
     }
 }
 }
+//  try {
+//// Inicializa la API de Telegram
+//TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
+//
+//// Registra ambos bots
+//        botsApi.registerBot(new botCuestionario());
+//
+//
+//        System.out.println("Bot registrado exitosamente.");
+//
+//    } catch (Exception e) {
+//        e.printStackTrace();
+//    }
